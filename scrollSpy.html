@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scroll Spy</title>
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        ::-webkit-scrollbar {
+            width: 0;
+        }
+
+        section {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 36px;
+        }
+
+        section:nth-child(even) {
+            background: #efefef;
+        }
+
+        nav {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            background: #000;
+            text-align: center;
+            z-index: 1;
+        }
+
+        nav>a {
+            position: relative;
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            display: inline-block;
+            font-size: 22px;
+        }
+
+        nav>a:hover,
+        section#one:hover~nav>a[href="#one"],
+        section#two:hover~nav>a[href="#two"],
+        section#three:hover~nav>a[href="#three"],
+        section#four:hover~nav>a[href="#four"],
+        section#five:hover~nav>a[href="#five"] {
+            background: #fff;
+            color: #000;
+        }
+
+    </style>
+</head>
+
+<body>
+    <section id='one'>Section One</section>
+    <section id='two'>Section Two</section>
+    <section id='three'>Section Three</section>
+    <section id='four'>Section Four</section>
+    <section id='five'>Section Five</section>
+
+    <nav>
+        <a href='#one'>One</a>
+        <a href='#two'>Two</a>
+        <a href='#three'>Three</a>
+        <a href='#four'>Four</a>
+        <a href='#five'>Five</a>
+    </nav>
+</body>
+
+</html>
