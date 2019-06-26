@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>parallax</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        section .bg {
+            position: absolute;
+            left: -50px;
+            right: -50px;
+            top: -50px;
+            bottom: -50px;
+        }
+
+        section .bg img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        section img {
+            width: 100%;
+        }
+
+        .left {
+            position: absolute;
+            width: 30%;
+            left: 0;
+            bottom: 0;
+        }
+
+        .right {
+            position: absolute;
+            width: 30%;
+            right: 0;
+            bottom: 0;
+        }
+
+        .middle {
+            position: absolute;
+            width: 70%;
+            left: 20%;
+            bottom: -20px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="bg" data-speed='-2'>
+            <img src="/img/hybg.jpg">
+        </div>
+        <div class="left" data-speed='-4'>
+            <img src="/img/mrl.png">
+        </div>
+        <div class="middle" id='mm' data-speed='4'>
+            <img src="/img/mrm.png">
+        </div>
+        <div class="right" data-speed='2'>
+            <img src="/img/mrr.png">
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('mousemove', parallax)
+
+        function parallax(e) {
+            this.querySelectorAll('section div')
+                .forEach(layer => {
+                    let speed = layer.getAttribute('data-speed')
+                    let x = (window.innerWidth - e.pageX * speed) / 100
+                    let y = (window.innerWidth - e.pageY * speed) / 100
+                    layer.style.transform = `translate(${x}px, ${y}px)`
+                })
+        }
+    </script>
+</body>
+
+</html>
