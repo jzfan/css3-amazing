@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scroll Nav</title>
+
+    <style>
+        body,
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 4rem;
+            background: #607d8b;
+            padding: 0 5rem;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: .5s;
+        }
+
+        ul {
+            display: flex;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            padding: 0 1.2rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 8rem 6rem;
+            box-sizing: border-box;
+        }
+
+        p {
+            line-height: 2.5;
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav id='navbar'>
+        <a href="#">Brand Name</a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h3>Some Title</h3>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore voluptatibus totam maiores est cumque
+            explicabo, quos dolorem, rem itaque debitis nam labore, distinctio facere. Ad at eos voluptatibus recusandae
+            accusamus?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat dolore magni magnam amet quia officiis at
+            consectetur illo dolores, libero eius eos deleniti ullam sit reiciendis, recusandae nam ducimus fugit?
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim nam maxime beatae iure quod! Vel similique
+            nam, officiis error distinctio ipsum maiores. Aperiam eveniet et, dicta aut pariatur sapiente eaque!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo itaque corrupti quisquam esse totam
+            aliquid aperiam? Reiciendis eaque tempore explicabo molestiae ad! Perferendis qui fugit inventore nobis,
+            minus quibusdam beatae!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore voluptatibus totam maiores est cumque
+            explicabo, quos dolorem, rem itaque debitis nam labore, distinctio facere. Ad at eos voluptatibus recusandae
+            accusamus?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat dolore magni magnam amet quia officiis at
+            consectetur illo dolores, libero eius eos deleniti ullam sit reiciendis, recusandae nam ducimus fugit?
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim nam maxime beatae iure quod! Vel similique
+            nam, officiis error distinctio ipsum maiores. Aperiam eveniet et, dicta aut pariatur sapiente eaque!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo itaque corrupti quisquam esse totam
+            aliquid aperiam? Reiciendis eaque tempore explicabo molestiae ad! Perferendis qui fugit inventore nobis,
+            minus quibusdam beatae!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore voluptatibus totam maiores est cumque
+            explicabo, quos dolorem, rem itaque debitis nam labore, distinctio facere. Ad at eos voluptatibus recusandae
+            accusamus?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat dolore magni magnam amet quia officiis at
+            consectetur illo dolores, libero eius eos deleniti ullam sit reiciendis, recusandae nam ducimus fugit?
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim nam maxime beatae iure quod! Vel similique
+            nam, officiis error distinctio ipsum maiores. Aperiam eveniet et, dicta aut pariatur sapiente eaque!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo itaque corrupti quisquam esse totam
+            aliquid aperiam? Reiciendis eaque tempore explicabo molestiae ad! Perferendis qui fugit inventore nobis,
+            minus quibusdam beatae!
+
+
+        </p>
+    </section>
+
+    <script>
+        let lastScrollTop = 0
+        let nav = document.getElementById('navbar')
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop
+            if (scrollTop > lastScrollTop) {
+                nav.style.top = '-4rem'
+            } else {
+                nav.style.top = '0'
+            }
+            lastScrollTop = scrollTop
+        })
+    </script>
+</body>
+
+</html>
