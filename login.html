@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            background: url('/img/bg.jpg') no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        section {
+            padding: 2rem 3rem;
+            background: rgba(0, 0, 0, .75);
+            box-sizing: border-box;
+            color: #fff;
+        }
+
+        h3 {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        form div {
+            position: relative;
+        }
+
+        form div input {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #fff;
+            color: #fff;
+            outline: 0;
+            padding: 1rem 0 .5rem;
+            margin-top: 1rem;
+            font-size: 1.2rem;
+        }
+
+        form div label {
+            position: absolute;
+            top: 2rem;
+            left: 0;
+            transition: 0.5s;
+            transform: scale(1, 1);
+        }
+
+        form div input:focus~label,
+        form div input:valid~label {
+            top: .5rem;
+            transform: scale(.8, .8);
+            color: #0ff;
+        }
+
+        button[type='submit'] {
+            background: #fff;
+            margin-top: 1rem;
+            border: none;
+            padding: .75rem 1.25rem;
+            border-radius: .25rem;
+        }
+
+    </style>
+</head>
+
+<body>
+    <section>
+        <h3>登录</h3>
+        <form action="#">
+            <div>
+                <input type="text" required>
+                <label>用户名</label>
+            </div>
+            <div>
+                <input type="password" required>
+                <label>密 码</label>
+            </div>
+            <button type="submit">提 交</button>
+        </form>
+    </section>
+</body>
+
+</html>
