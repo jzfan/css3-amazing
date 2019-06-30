@@ -19,11 +19,12 @@
         button {
             width: 200px;
             height: 60px;
-            background: blue;
+            background: #00f;
             color: white;
             font-size: 24px;
             border: none;
             box-shadow: none;
+            cursor: pointer;
         }
 
         ul {
@@ -32,14 +33,16 @@
             transform-origin: top;
             transform: perspective(1000px) rotateX(-90deg);
             transition: 0.5s;
-        }
-
-        ul.active {
-            transform: perspective(1000px) rotateX(0deg);
-        }
-
-        li {
             list-style: none;
+        }
+
+        button:hover~ul {
+            transform: perspective(1000px) rotateX(0deg);
+
+        }
+
+        ul:hover {
+            transform: perspective(1000px) rotateX(0deg);
         }
 
         a {
@@ -47,14 +50,15 @@
             padding: 10px;
             text-align: center;
             text-decoration: none;
-            background: #333;
-            color: white;
-            border-bottom: 1px solid rgba(0, 0, 0, .2);
+            background: #fff;
+            color: #00f;
+            border: 1px solid #00f;
             transition: 0.5s;
         }
 
         a:hover {
-            background: #0d7ad0;
+            background: #00f;
+            color: #fff;
         }
 
     </style>
@@ -71,12 +75,6 @@
             <li><a href="#">item 5</a></li>
         </ul>
     </div>
-    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.slim.js"></script>
-    <script>
-        $('button').click(() => {
-            $('ul').toggleClass('active')
-        })
-    </script>
 </body>
 
 </html>

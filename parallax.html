@@ -13,6 +13,10 @@
             padding: 0;
         }
 
+        img {
+            width: 100%;
+        }
+
         section {
             position: relative;
             width: 100%;
@@ -39,26 +43,27 @@
 
         section img {
             width: 100%;
+            transition: .5s;
         }
 
-        .left {
+        section img:nth-child(2) {
             position: absolute;
-            width: 30%;
+            width: 100%;
             left: 0;
             bottom: 0;
         }
 
-        .right {
+        section img:nth-child(3) {
             position: absolute;
-            width: 30%;
-            right: 0;
+            width: 100%;
+            left: 0;
             bottom: 0;
         }
 
-        .middle {
+        .beauty {
             position: absolute;
-            width: 70%;
-            left: 20%;
+            width: 80%;
+            left: 0;
             bottom: -20px;
         }
 
@@ -67,25 +72,19 @@
 
 <body>
     <section>
-        <div class="bg" data-speed='-2'>
-            <img src="/img/hybg.jpg">
+        <div class="bg">
+            <img src="/img/bg-garden.jpg" data-speed='-2'>
         </div>
-        <div class="left" data-speed='-4'>
-            <img src="/img/mrl.png">
-        </div>
-        <div class="middle" id='mm' data-speed='4'>
-            <img src="/img/mrm.png">
-        </div>
-        <div class="right" data-speed='2'>
-            <img src="/img/mrr.png">
-        </div>
+        <img class="bg1" src="/img/sgzt.png" data-speed='4'>
+        <img class="bg2" src="/img/let.png" data-speed='-4'>
+        <img class="beauty" src="/img/beauty.png" data-speed='2'>
     </section>
 
     <script>
         document.addEventListener('mousemove', parallax)
 
         function parallax(e) {
-            this.querySelectorAll('section div')
+            this.querySelectorAll('section img')
                 .forEach(layer => {
                     let speed = layer.getAttribute('data-speed')
                     let x = (window.innerWidth - e.pageX * speed) / 100
@@ -94,7 +93,6 @@
                 })
         }
 
-        parallax();
     </script>
 </body>
 
