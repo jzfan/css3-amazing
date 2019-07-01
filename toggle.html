@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Toggle</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Poppins', sans-serif;
+            background: #000;
+        }
+
+        .card {
+            position: relative;
+            width: 300px;
+            height: 400px;
+            background: #262626;
+            overflow: hidden;
+        }
+
+        input,
+        .toggle {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            bottom: 10px;
+            right: 10px;
+            outline: none;
+            z-index: 10;
+        }
+
+        input {
+            opacity: 0;
+        }
+
+        .toggle {
+            pointer-events: none;
+            border-radius: 50%;
+            background: #fff;
+            transition: 0.5s;
+            text-align: center;
+            line-height: 46px;
+            font-size: 36px;
+            box-shadow: 0 0 0 0 #9c27b0;
+        }
+
+        input:checked~.toggle {
+            box-shadow: 0 0 0 500px #9c27b0;
+            transform: rotate(225deg);
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            z-index: 12;
+            pointer-events: none;
+            transition: .5s;
+            opacity: 0;
+            color: #fff;
+        }
+
+        input:checked~.content {
+            opacity: 1;
+            transition-delay: .5s;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <input type="checkbox">
+        <div class="toggle">+</div>
+        <div class="imgBox">
+            <img src="/img/xn.jpg" alt="">
+        </div>
+        <div class="content">
+            <h3>Some Title</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique libero veniam, dolorem impedit ex
+                vero reiciendis quis laudantium! Veritatis ab nam nobis nemo distinctio, laborum minus libero tenetur a
+                facere.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime similique necessitatibus sequi accusamus
+                ab amet maiores .
+            </p>
+        </div>
+
+    </div>
+</body>
+
+</html>
