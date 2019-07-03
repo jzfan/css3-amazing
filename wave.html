@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Wave</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            position: relative;
+            background: url('./img/beach.jpg');
+            background-size: cover;
+            width: 100%;
+            height: 100vh;
+        }
+
+        #wave {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        #wave path {
+            fill: #fff;
+        }
+
+        section {
+            width: 100%;
+            height: 100vh;
+            background: #fff;
+            padding: 0 10% 10%;
+            box-sizing: border-box;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <svg id='wave' viewBox="0 0 1600 156" xmlns="http://www.w3.org/2000/svg">
+            <path fill="white"
+                d="M 1600 164.648 V 66.4428 C 1600 66.4428 1198.64 30.0805 758.025 33.6272 C 317.412 37.1743 0 43.9593 0 43.9593 V 164.648 H 1600 Z">
+                <animate repeatCount="indefinite" fill="freeze" attributeName="d" dur="6s" values="M1600 156V73.5801C1600 73.5801 1279 -53.8561 800 26.7048C321 107.266 0 3.82945 0 3.82945V156H1600Z;
+                M1600 157V80.5802C1600 80.5802 1202 105 800 27.7048C398 -49.5902 0 64.8295 0 64.8295V157H1600Z;
+                M1600 180.106V53.6857C1600 53.6857 1055 180.106 683 46.0001C311 -88.1054 0 115.686 0 115.686V180.106H1600Z;
+                M1600 156V73.5801C1600 73.5801 1279 -53.8561 800 26.7048C321 107.266 0 3.82945 0 3.82945V156H1600Z
+                "></animate>
+            </path>
+        </svg>
+    </header>
+    <section>
+        <h2>Some Title</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum error provident quidem optio tempore facere
+            libero nesciunt nam. Voluptates deleniti dolore nemo? Illo molestiae numquam obcaecati ex corrupti maiores
+            eos?
+
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis dolorem dolore blanditiis maiores minima neque
+            error reiciendis aut optio sapiente? Pariatur, voluptate blanditiis obcaecati ratione voluptatum nisi fuga
+            dolores qui!
+        </p>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi praesentium, voluptatibus asperiores vel at,
+            repellat similique ducimus illo debitis iste, deserunt laboriosam? Impedit adipisci voluptatibus maiores
+            quos labore consequatur eum!
+        </p>
+    </section>
+</body>
+
+</html>
