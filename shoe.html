@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shoe</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #070c24;
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 900px;
+            height: 600px;
+            margin: 20px;
+            background: #fff;
+        }
+
+        .imgBx {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            width: 35%;
+            height: 100%;
+            align-items: center;
+            background: #006dbc;
+        }
+
+        .imgBx::before {
+            content: 'NB';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: #000;
+            opacity: .2;
+            font-size: 8rem;
+            font-weight: 800;
+        }
+
+        .imgBx img {
+            position: relative;
+            /* width: 800px; */
+            transform: rotate(-30deg);
+            left: -10px;
+        }
+
+        .details {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 65%;
+            height: 100%;
+            box-sizing: border-box;
+            padding: 40px;
+        }
+
+        .details h2 {
+            font-size: 2.5rem;
+        }
+
+        .details h3 {
+            font-size: 1.5rem;
+            color: #444;
+            letter-spacing: 2px;
+        }
+
+        .details p {
+            position: relative;
+            width: 85%;
+            left: 10%;
+            margin-top: 15px;
+            color: #333;
+        }
+
+        .details .footer {
+            display: flex;
+            margin-top: 20px;
+            justify-content: space-between;
+        }
+
+        .details button {
+            padding: 15px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            background: #006dbc;
+            color: #fff;
+            letter-spacing: 1px;
+        }
+
+        .details button:hover {
+            background: #23a2ff;
+        }
+
+        @media (max-width: 1080px) {
+            .container {
+                height: auto;
+            }
+
+            .imgBx {
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .imgBx img {
+                width: 100%;
+                left: initial;
+                transform: rotate(0deg);
+            }
+
+            .details {
+                width: 100%;
+                height: auto;
+                padding: 20px;
+            }
+
+            .details p {
+                width: 100%;
+                left: initial;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="imgBx">
+            <img src="./img/shoe.png" alt="">
+        </div>
+        <div class="details">
+            <div class="content">
+                <h2>Fashion 2099</h2>
+                <h3>Some Subtitle Goes Here</h3>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae repudiandae in quidem,
+                    obcaecati necessitatibus aspernatur odit suscipit eligendi, dolorem, modi esse ipsum delectus
+                    sed sint enim velit id exercitationem perspiciatis.
+
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque minima eos repudiandae
+                    obcaecati cum recusandae? Distinctio dolore esse, repudiandae quam, vel odit ipsam quo
+                    blanditiis saepe illo nesciunt aliquid mollitia.
+                </p>
+                <p>
+
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam voluptate porro quisquam eveniet
+                    optio itaque architecto tempore atque suscipit, nemo vero maiores accusamus quidem aliquid
+                    natus, quia minus rem vitae!
+
+                </p>
+                <div class="footer">
+                    <h3>￥ 666.66</h3>
+                    <button>Buy Now</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Box</title>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_650225_uk978ayo3p6qolxr.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            min-height: 100vh;
+            background: #20024a;
+        }
+
+        .container {
+            width: 1000px;
+            height: 500px;
+            display: flex;
+        }
+
+        .box {
+            position: relative;
+            width: 250px;
+            height: 500px;
+            background: #000;
+            transition: 0.5s;
+        }
+
+        .thumb,
+        .details {
+            position: absolute;
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .box:nth-child(odd) .thumb {
+            bottom: 0;
+            left: 0;
+        }
+
+        .box:nth-child(even) .details {
+            bottom: 0;
+            left: 0;
+        }
+
+        .thumb img {
+            width: 100%;
+        }
+
+        .box:nth-child(1) .details {
+            background: #00f;
+        }
+
+        .box:nth-child(2) .details {
+            background: #10baba;
+        }
+
+        .box:nth-child(3) .details {
+            background: #f0f;
+        }
+
+        .box:nth-child(4) .details {
+            background: #cece0d;
+        }
+
+        .content {
+            position: absolute;
+            top: calc(50% + 20px);
+            transform: translateY(-50%);
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+            transition: 0.5s;
+            color: #fff;
+        }
+
+        .box:hover {
+            transform: scale(1.1);
+            z-index: 1;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 1);
+        }
+
+        .box:hover .content {
+            top: 50%;
+        }
+
+        .iconfont {
+            font-size: 80px;
+        }
+
+        .content h3 {
+            margin: 0;
+            padding: 0;
+        }
+
+        .content a {
+            color: #fff;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 15px;
+            padding: 5px 20px;
+            border: 1px solid #fff;
+            transition: 0.5s;
+            transform: scale(0);
+        }
+
+        .box:hover .content a {
+            transform: scale(1);
+        }
+
+        .content a:hover {
+            background: #fff;
+            color: #333;
+        }
+
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        <div class="box">
+            <div class="thumb">
+                <img src="./img/box1.jpg" alt="">
+            </div>
+            <div class="details">
+                <div class="content">
+                    <i class="iconfont icon-ranking_sponsor_star_hollow"></i>
+                    <h3>Lorem ipsum</h3>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="thumb">
+                <img src="./img/box2.jpg" alt="">
+            </div>
+            <div class="details">
+                <div class="content">
+                    <i class="iconfont icon-iconfontzhizuobiaozhun023140"></i>
+                    <h3>Lorem ipsum</h3>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="thumb">
+                <img src="./img/box3.jpg" alt="">
+            </div>
+            <div class="details">
+                <div class="content">
+                    <i class="iconfont icon-jifen"></i>
+                    <h3>Lorem ipsum</h3>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="box">
+            <div class="thumb">
+                <img src="./img/box4.jpg" alt="">
+            </div>
+            <div class="details">
+                <div class="content">
+                    <i class="iconfont icon-interface3"></i>
+                    <h3>Lorem ipsum</h3>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3D Flap Image</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            position: relative;
+            width: 600px;
+            height: 400px;
+        }
+
+        .container .box {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+
+        .container .box span {
+            width: 20%;
+            height: 100%;
+            transition: 1s;
+        }
+
+        .container .box.box1 span {
+            background: url('./img/car.jpg');
+            transform-origin: top;
+        }
+
+        .container:hover .box.box1 span {
+            transform: rotateX(90deg) translateY(-50%);
+        }
+
+        .container .box.box2 span {
+            background: url('./img/dress.jpg');
+            transform-origin: bottom;
+            transform: rotateX(90deg) translateY(50%);
+        }
+
+        .container:hover .box.box2 span {
+            transform: rotateX(0deg) translateY(0);
+        }
+
+        .container .box span:nth-child(1) {
+            background-position-x: 0;
+            transition-delay: 0s;
+        }
+
+        .container .box span:nth-child(2) {
+            background-position-x: -100%;
+            transition-delay: 0.2s;
+        }
+
+        .container .box span:nth-child(3) {
+            background-position-x: -200%;
+            transition-delay: 0.4s;
+        }
+
+        .container .box span:nth-child(4) {
+            background-position-x: -300%;
+            transition-delay: 0.6s;
+        }
+
+        .container .box span:nth-child(5) {
+            background-position-x: -400%;
+            transition-delay: 0.8s;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box box1">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="box box2">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</body>
+
+</html>
