@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>slider</title>
+    <style>
+        section {
+            position: relative;
+            margin: 0 auto;
+            margin-top: 10vh;
+            width: 70%;
+            height: 42vw;
+        }
+
+        section div {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .prev,
+        .next {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+            width: 15%;
+            /* background: rgba(255, 255, 255, 0); */
+            z-index: 5;
+            font-size: 50px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        #one,
+        #two,
+        #three {
+            z-index: -1;
+        }
+
+        #i1,
+        #i2,
+        #i3 {
+            display: none;
+        }
+
+        #i1:checked~#one,
+        #i2:checked~#two,
+        #i3:checked~#three {
+            z-index: 9;
+        }
+
+        nav {
+            position: absolute;
+            width: 100%;
+            bottom: 10%;
+            text-align: center;
+            z-index: 19;
+        }
+
+        nav>label {
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, .6);
+            margin: 0 4px;
+        }
+
+        #i1:checked~nav label:nth-child(1),
+        #i2:checked~nav label:nth-child(2),
+        #i3:checked~nav label:nth-child(3) {
+            background: #fff;
+        }
+
+    </style>
+</head>
+
+<body>
+    <section>
+        <input type="radio" id='i1' name='show' checked>
+        <input type="radio" id='i2' name='show'>
+        <input type="radio" id='i3' name='show'>
+        <div id='one'>
+            <img src="https://unsplash.it/500/300?1" alt="">
+            <label for="i3" class="prev">
+                <</label> <label for="i2" class="next">>
+            </label>
+        </div>
+        <div id='two'>
+            <img src="https://unsplash.it/500/300?2" alt="">
+            <label for="i1" class="prev">
+                <</label> <label for="i3" class="next">>
+            </label>
+        </div>
+        <div id='three'>
+            <img src="https://unsplash.it/500/300?3" alt="">
+            <label for="i2" class="prev">
+                <</label> <label for="i1" class="next">>
+            </label>
+        </div>
+        <nav>
+            <label for="i1"></label>
+            <label for="i2"></label>
+            <label for="i3"></label>
+        </nav>
+    </section>
+
+</body>
+
+</html>
