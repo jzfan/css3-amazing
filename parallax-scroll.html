@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>parallax-scroll</title>
+    <style>
+        * {
+            border: 0;
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            padding: 1rem 2rem;
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        section:nth-child(1) {
+            background: url('./img/par1.jpg');
+            background-size: cover;
+        }
+
+        section:nth-child(2) {
+            background: #f43f22
+        }
+
+        section:nth-child(3) {
+            background: url('./img/par2.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        section:nth-child(4) {
+            background: #58f63e
+        }
+
+    </style>
+</head>
+
+<body>
+    <section id='parallax'>
+        <h1>section 1</h1>
+    </section>
+    <section>
+        <h1>section 2</h1>
+    </section>
+    <section>
+        <h1>section 3</h1>
+    </section>
+    <section>
+        <h1>section 4</h1>
+    </section>
+
+    <script>
+        const par = document.getElementById('parallax')
+        window.addEventListener('scroll', (e) => {
+            let y = window.pageYOffset
+            par.style.backgroundPositionY = y * 0.7 + 'px'
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>hover-long-image</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+
+        div {
+            width: 40vw;
+            height: 40vw;
+            background-position: top;
+            transition: ease-in-out 8s;
+        }
+
+        div:nth-child(1) {
+            background: url('./img/long1.png');
+            background-size: cover;
+        }
+
+        div:nth-child(2) {
+            background: url('./img/long2.jpg');
+            background-size: cover;
+        }
+
+        div:hover {
+            background-position: bottom;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div>
+    </div>
+    <div>
+    </div>
+</body>
+
+</html>
