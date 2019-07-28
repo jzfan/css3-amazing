@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>button-hover-3</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #000;
+        }
+
+        a {
+            position: relative;
+            display: block;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            font-size: 1.5rem;
+            color: #fff;
+            background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb36, #03a9f4);
+            background-size: 400%;
+            border-radius: 2.5rem;
+            letter-spacing: 4px;
+        }
+
+        a:hover {
+            animation: glowing 8s linear infinite;
+        }
+
+        a::before {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            z-index: -1;
+            background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb36, #03a9f4);
+            background-size: 400%;
+            border-radius: 2.5rem;
+            transition: 0.5s;
+            opacity: 0;
+        }
+
+        a:hover::before {
+            filter: blur(1.5rem);
+            opacity: 1;
+            animation: glowing 8s linear infinite;
+        }
+
+        @keyframes glowing {
+            0% {
+                background-position: 0%;
+            }
+
+            100% {
+                background-position: 400%;
+
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <a href="#">
+        BUTTON
+    </a>
+</body>
+
+</html>

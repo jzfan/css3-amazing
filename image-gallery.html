@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>image-gallery</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            width: 100%;
+            display: grid;
+            grid-auto-flow: dense;
+            grid-template: "1fr 1fr 1fr 1fr 1fr"33.33vh "1fr 1fr 1fr 1fr 1fr"33.33vh "1fr 1fr 1fr 1fr 1fr"33.33vh;
+            /* grid-gap: 5px; */
+        }
+
+        section div {
+            position: relative;
+            background: #ccc;
+
+        }
+
+        div:nth-child(1) {
+            grid-row: span 2;
+        }
+
+        div:nth-child(2),
+        div:nth-child(6),
+        div:nth-child(8),
+        div:nth-child(10) {
+            grid-column: span 2;
+        }
+
+        div img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 980px) {
+
+            section {
+                grid-template:
+                    "1fr 1fr 1fr"250px "1fr 1fr 1fr"250px "1fr 1fr 1fr"250px "1fr 1fr 1fr"250px "1fr 1fr 1fr"250px;
+                /* grid-gap: 5px; */
+            }
+        }
+
+        @media (max-width: 760px) {
+
+            section {
+                grid-template:
+                    "1fr 1fr"250px "1fr 1fr"250px "1fr 1fr"250px "1fr 1fr"250px "1fr 1fr"250px "1fr 1fr"250px "1fr 1fr"250px;
+                /* grid-gap: 5px; */
+            }
+
+            div:nth-child(8) {
+                grid-column: span 1;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <section>
+        <div>
+            <img src="./img/gallery1.jpg" alt="">
+        </div>
+        <div>
+            <img src="./img/gallery2.jpg" alt="">
+        </div>
+        <div>
+            <img src="./img/gallery3.jpg" alt="">
+        </div>
+        <div>
+            <img src="./img/gallery4.jpg" alt="">
+        </div>
+        <div>
+            <img src="./img/gallery5.jpg" alt="">
+        </div>
+        <div>
+            <img src="./img/gallery6.jpg" alt="">
+        </div>
+        <div>
+            <img src="./img/gallery7.jpg" alt="">
+        </div>
+        <div>
+            <img src="./img/gallery8.jpg" alt="">
+        </div>
+        <div>
+            <img src="./img/gallery9.jpg" alt="">
+        </div>
+        <div>
+            <img src="./img/gallery10.jpg" alt="">
+        </div>
+    </section>
+</body>
+
+</html>
