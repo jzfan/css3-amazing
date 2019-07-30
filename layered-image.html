@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>layered-image</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div {
+            position: relative;
+            margin-top: 10rem;
+            width: 20rem;
+            height: 30rem;
+            background: rgba(0, 0, 0, .1);
+            transform: rotate(-30deg) skew(25deg) scale(0.8);
+            transition: 0.5s;
+        }
+
+        img {
+            position: absolute;
+            width: 100%;
+            transition: 0.5s;
+        }
+
+        div:hover img:nth-child(4) {
+            transform: translate(10rem, -10rem);
+            opacity: 1;
+        }
+
+        div:hover img:nth-child(3) {
+            transform: translate(7.5rem, -7.5rem);
+            opacity: .8;
+        }
+
+        div:hover img:nth-child(2) {
+            transform: translate(5rem, -5rem);
+            opacity: .6;
+        }
+
+        div:hover img:nth-child(1) {
+            transform: translate(2.5rem, -2.5rem);
+            opacity: .4;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <img src="./img/gallery1.jpg">
+        <img src="./img/gallery1.jpg">
+        <img src="./img/gallery1.jpg">
+        <img src="./img/gallery1.jpg">
+    </div>
+</body>
+
+</html>
