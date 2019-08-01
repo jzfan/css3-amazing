@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>image-distortion</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .imgBox {
+            position: relative;
+            width: 40rem;
+            height: 26rem;
+            overflow: hidden;
+
+        }
+
+        .imgBox img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            transition: 0.5s;
+        }
+
+        .imgBox:hover img:nth-child(2) {
+            transform: translateX(-50%) scaleX(2);
+            opacity: 0;
+            filter: blur(10px);
+        }
+
+        .imgBox img:nth-child(1) {
+            transform: translateX(50%) scaleX(2);
+            opacity: 0;
+            filter: blur(10px);
+        }
+
+        .imgBox:hover img:nth-child(1) {
+            transform: translateX(0) scaleX(1);
+            opacity: 1;
+            filter: blur(0);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="imgBox">
+        <img src="./img/gallery3.jpg" alt="">
+        <img src="./img/gallery6.jpg" alt="">
+    </div>
+</body>
+
+</html>
