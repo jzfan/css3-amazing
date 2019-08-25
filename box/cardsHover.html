@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>cards hover</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(0deg, #00b7ff 0% 50%, white 50% 100%);
+        }
+
+        .box {
+            display: flex;
+        }
+
+        .box:hover .card {
+            transform: perspective(500px) rotateY(30deg);
+        }
+
+        .card {
+            padding: 7rem 5rem;
+            margin: 0 1rem;
+            background: white;
+            border-radius: .5rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+            transform-style: preserve-3d;
+            transition: transform .5s;
+            overflow: hidden;
+        }
+
+        .box .card:hover {
+            transform: rotateY(0deg);
+        }
+
+        .box .card:hover~.card {
+            transform: perspective(500px) rotateY(-30deg);
+        }
+
+        h1 {
+            width: 4rem;
+            height: 4rem;
+            line-height: 4rem;
+            border-radius: 50%;
+            background: #00b7ff;
+            color: white;
+            text-align: center;
+            transition: box-shadow .5s;
+        }
+
+        .card:hover h1 {
+            color: #00b7ff;
+            background: white;
+            box-shadow: 0 0 0 10rem #00b7ff;
+        }
+
+    </style>
+</head>
+
+<body>
+    <section class="box">
+
+        <div class="card">
+            <h1>1</h1>
+        </div>
+        <div class="card">
+            <h1>2</h1>
+        </div>
+        <div class="card">
+            <h1>3</h1>
+        </div>
+        <div class="card">
+            <h1>4</h1>
+        </div>
+        <div class="card">
+            <h1>5</h1>
+        </div>
+    </section>
+</body>
+
+</html>

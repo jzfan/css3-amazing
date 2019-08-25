@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>text-clip</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        section {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+
+        h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 6rem;
+            color: transparent;
+            letter-spacing: .75rem;
+        }
+
+        h1 span:nth-child(1) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: #000;
+            transition: .5s;
+            clip-path: polygon(0 0, 100% 0, 100% 50.1%, 0 50.1%);
+            overflow: hidden;
+        }
+
+        h1 span:nth-child(2) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: #000;
+            transition: .5s;
+            clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+            overflow: hidden;
+        }
+
+        h1 span:nth-child(3) {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%) scaleY(0);
+            width: 94%;
+            margin-left: 2%;
+            color: #000;
+            background: #ff0;
+            font-size: 1.5rem;
+            font-weight: 400;
+            letter-spacing: 1rem;
+            text-align: center;
+            transition: .5s;
+        }
+
+        h1:hover span:nth-child(1) {
+            transform: translateY(-1.25rem);
+        }
+
+
+        h1:hover span:nth-child(2) {
+            transform: translateY(1.25rem);
+        }
+
+
+        h1:hover span:nth-child(3) {
+            transform: translateY(-50%) scaleY(1);
+        }
+
+        section:nth-child(2) {
+            background: rgb(240, 63, 92);
+        }
+
+        /* section:nth-child(2) h1, */
+        section:nth-child(2) span {
+            color: white;
+        }
+
+        section:nth-child(2) span:nth-child(3) {
+            color: rgb(240, 63, 92);
+            background: white;
+            width: 90%;
+            margin-left: 2.5%;
+            padding-left: 5px;
+            font-size: 1.25rem;
+            font-weight: 400;
+            letter-spacing: .5rem;
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>
+            BELIVE
+            <span>BELIVE</span>
+            <span>BELIVE</span>
+            <span>IN YOURSELF</span>
+        </h1>
+    </section>
+
+    <section>
+        <h1>
+            LOVE
+            <span>LOVE</span>
+            <span>LOVE</span>
+            <span>YOURSELF FIRST</span>
+        </h1>
+    </section>
+</body>
+
+</html>
