@@ -5,151 +5,173 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/all.css">
     <title>index</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
+        div {
+            background: white;
         }
 
-        body {
-            min-height: 100vh;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            padding: 2rem 0;
-            list-style: inside;
-            white-space: nowrap;
-        }
-
-        section {
-            flex: 1;
-            box-sizing: border-box;
-            padding: 1rem;
-            margin: 1rem;
-            background: #ccc;
-            line-height: 2;
-        }
-
-        h3 {
-            letter-spacing: .15rem;
-        }
-
-        ol {
-            margin-top: 1rem;
+        div:hover {
+            transform: scale(1.1);
         }
 
     </style>
-
 </head>
 
 
 
-<body>
-    <section>
-        <h3>animate</h3>
-        <ol>
-            <li><a href="./animate/counter.html">counter</a></li>
-            <li><a href="./animate/animate.html">scroll animate</a></li>
-        </ol>
-    </section>
+<body class="min-h-screen pb-8 text-gray-800 bg-gray-100">
+
+    <header class="w-full flex items-center justify-center bg-jigsaw bg-gray-200">
+        <h1 class="py-24 text-3xl font-bold tracking-wider text-blue-700">CSS3 AMAZING</h1>
+    </header>
+
+    <main class="container mx-auto flex flex-wrap justify-around whitespace-no-wrap">
+
+        <div class="flex-1 py-4 m-4 border border-gray-200 shadow">
+            <h3 class="px-4 text-xl text-blue-600 font-bold capitalize tracking-widest">animate</h3>
+            <ol class="mt-2 list-inside list-decimal">
+                <li class="px-4  hover:text-blue-600"><a href="./animate/counter.html">counter</a></li>
+                <li class="px-4  hover:text-blue-600"><a href="./animate/animate.html">scroll animate</a>
+                </li>
+            </ol>
+        </div>
+
+        <div class="flex-1 py-4 m-4 border border-gray-200 shadow">
+            <h3 class="px-4 text-xl text-blue-600 font-bold capitalize tracking-widest">box</h3>
+            <ol class="mt-2 list-inside list-decimal">
+                <li class="px-4  hover:text-blue-600"><a href="./box/box.html">icon-box</a></li>
+                <li class="px-4  hover:text-blue-600"><a href="./box/icon-box2.html">icon-box2</a></li>
+                <li class="px-4  hover:text-blue-600"><a href="./box/shoe.html">shoe</a></li>
+                <li class="px-4  hover:text-blue-600"><a href="./box/skewBorderBox.html">skew border
+                        box</a>
+                </li>
+                <li class="px-4  hover:text-blue-600"><a href="./box/image-gallery.html">image-gallery</a>
+                </li>
+                <li class="px-4  hover:text-blue-600"><a href="./box/cardsHover.html">cardsHover</a></li>
+            </ol>
+        </div>
+
+        <div class="flex-1 py-4 m-4 border border-gray-200 shadow">
+            <h3 class="px-4 text-xl text-blue-600 font-bold capitalize tracking-widest">button</h3>
+            <ol class="mt-2 list-inside list-decimal">
+                <li class="px-4  hover:text-blue-600"><a href="./button/button-power.html">power
+                        switch</a>
+                </li>
+                <li class="px-4  hover:text-blue-600"><a href="./button/button-hover.html">button
+                        hover</a>
+                </li>
+                <li class="px-4  hover:text-blue-600"><a href="./button/button-hover-2.html">button hover
+                        2</a>
+                </li>
+                <li class="px-4  hover:text-blue-600"><a href="./button/button-hover-3.html">button hover
+                        3</a>
+                </li>
+                <li class="px-4  hover:text-blue-600"><a href="./button/glassButton.html">glass botton</a>
+                </li>
+                <li class="px-4  hover:text-blue-600"><a href="./button/dropdown.html">dropdown</a></li>
+                <li class="px-4  hover:text-blue-600"><a href="./button/toggle.html">toggle button</a>
+                </li>
+                <li class="px-4  hover:text-blue-600"><a href="./button/checkbox-day-night.html">checkbox
+                        day
+                        night</a></li>
+            </ol>
+        </div>
 
 
+        <div class="flex-1 py-4 m-4 border border-gray-200 shadow">
+            <h3 class="px-4 text-xl text-blue-600 font-bold capitalize tracking-widest">loading</h3>
+            <ol class="mt-2 list-inside list-decimal">
+                <li class="px-4  hover:text-blue-600"><a href="./loading/loading1.html">loading 1</a></li>
+                <li class="px-4  hover:text-blue-600"><a href="./loading/loading2.html">loading 2</a></li>
+                <li class="px-4  hover:text-blue-600"><a href="./loading/loading-circle.html">loading
+                        circle</a>
+                </li>
+                <li class="px-4  hover:text-blue-600"><a href="./loading/loading-plane.html">loading-plane</a>
+                </li>
+                <li class="px-4  hover:text-blue-600"><a href="./loading/loading-ring.html">loading-ring</a>
+                </li>
 
-    <section>
-        <h3>box</h3>
-        <ol>
-            <li><a href="./box/box.html">box</a></li>
-            <li><a href="./box/shoe.html">shoe</a></li>
-            <li><a href="./box/skewBorderBox.html">skew border box</a></li>
-            <li><a href="./box/image-gallery.html">image-gallery</a></li>
-            <li><a href="./box/cardsHover.html">cardsHover</a></li>
-        </ol>
-    </section>
-
-    <section>
-        <h3>button</h3>
-        <ol>
-            <li><a href="./button/button-power.html">power switch</a></li>
-            <li><a href="./button/button-hover.html">button hover</a></li>
-            <li><a href="./button/button-hover-2.html">button hover 2</a></li>
-            <li><a href="./button/button-hover-3.html">button hover 3</a></li>
-            <li><a href="./button/glassButton.html">glass botton</a></li>
-            <li><a href="./button/dropdown.html">dropdown</a></li>
-            <li><a href="./button/toggle.html">toggle button</a></li>
-            <li><a href="./button/checkbox-day-night.html">checkbox day night</a></li>
-        </ol>
-    </section>
+            </ol>
+        </div>
 
 
-    <section>
-        <h3>loading</h3>
-        <ol>
-            <li><a href="./loading/loading1.html">loading 1</a></li>
-            <li><a href="./loading/loading2.html">loading 2</a></li>
-            <li><a href="./loading/loading-circle.html">loading circle</a></li>
-            <li><a href="./loading/loading-plane.html">loading-plane</a></li>
-            <li><a href="./loading/loading-ring.html">loading-ring</a></li>
+        <div class="flex-1 py-4 m-4 border border-gray-200 shadow">
+            <h3 class="px-4 text-xl text-blue-600 font-bold capitalize tracking-widest">image</h3>
+            <ol class="mt-2 list-inside list-decimal">
+                <li class="px-4  hover:text-blue-600"><a href="./image/hover-long-image.html">hover-long-image</a>
+                </li>
+                <li class="px-4  hover:text-blue-600"><a href="./image/layered-image.html">layered
+                        image</a>
+                </li>
+                <li class="px-4  hover:text-blue-600"><a href="./image/3DflapImg.html">3d flap image</a>
+                </li>
+                <li class="px-4  hover:text-blue-600"><a href="./image/slider.html">slider</a></li>
+                <li class="px-4  hover:text-blue-600"><a href="./image/image-distortion.html">image-distortion</a>
+                </li>
+                <li class="px-4  hover:text-blue-600"><a href="./image/lazeLoading.html">laze loading</a>
+                </li>
+            </ol>
+        </div>
+        <div class="flex-1 py-4 m-4 border border-gray-200 shadow">
+            <h3 class="px-4 text-xl text-blue-600 font-bold capitalize tracking-widest">other</h3>
+            <ol class="mt-2 list-inside list-decimal">
+                <li class="px-4  hover:text-blue-600"><a href="./other/login.html">login form</a></li>
+                <li class="px-4  hover:text-blue-600"><a href="./other/street.html">spot</a></li>
+                <li class="px-4  hover:text-blue-600"><a href="./other/linear-gradient.html">linear
+                        gradient</a>
+                </li>
+            </ol>
+        </div>
 
-        </ol>
-    </section>
+        <div class="flex-1 py-4 m-4 border border-gray-200 shadow">
+            <h3 class="px-4 text-xl text-blue-600 font-bold capitalize tracking-widest">parallax</h3>
+            <ol class="mt-2 list-inside list-decimal">
+                <li class="px-4  hover:text-blue-600"><a href="./parallax/parallax.html">parallax</a></li>
+                <li class="px-4  hover:text-blue-600"><a href="./parallax/parallax-scroll.html">parallax
+                        scroll</a>
+                </li>
+            </ol>
+        </div>
+        <div class="flex-1 py-4 m-4 border border-gray-200 shadow">
+            <h3 class="px-4 text-xl text-blue-600 font-bold capitalize tracking-widest">shape</h3>
+            <ol class="mt-2 list-inside list-decimal">
+                <li class="px-4  hover:text-blue-600"><a href="./shape/wave.html">wave header</a></li>
+                <li class="px-4  hover:text-blue-600"><a href="./shape/curvedHeader.html">curved
+                        header</a>
+                </li>
+                <li class="px-4  hover:text-blue-600"><a href="./shape/triangle.html">triangle</a></li>
 
+            </ol>
+        </div>
+        <div class="flex-1 py-4 m-4 border border-gray-200 shadow">
+            <h3 class="px-4 text-xl text-blue-600 font-bold capitalize tracking-widest">scroll</h3>
+            <ol class="mt-2 list-inside list-decimal">
+                <li class="px-4  hover:text-blue-600"><a href="./scroll/scrollSpy.html">scroll spy</a>
+                </li>
+                <li class="px-4  hover:text-blue-600"><a href="./scroll/scrollNav.html">scroll nav</a>
+                </li>
+                <li class="px-4  hover:text-blue-600"><a href="./scroll/scrollDown.html">scroll down</a>
+                </li>
 
-    <section>
-        <h3>image</h3>
-        <ol>
-            <li><a href="./image/hover-long-image.html">hover-long-image</a></li>
-            <li><a href="./image/layered-image.html">layered image</a></li>
-            <li><a href="./image/3DflapImg.html">3d flap image</a></li>
-            <li><a href="./image/slider.html">slider</a></li>
-            <li><a href="./image/image-distortion.html">image-distortion</a></li>
-            <li><a href="./image/lazeLoading.html">laze loading</a></li>
-        </ol>
-    </section>
-    <section>
-        <h3>other</h3>
-        <ol>
-            <li><a href="./other/login.html">login form</a></li>
-            <li><a href="./other/street.html">spot</a></li>
-            <li><a href="./other/linear-gradient.html">linear gradient</a></li>
-        </ol>
-    </section>
+            </ol>
+        </div>
 
-    <section>
-        <h3>parallax</h3>
-        <ol>
-            <li><a href="./parallax/parallax.html">parallax</a></li>
-            <li><a href="./parallax/parallax-scroll.html">parallax scroll</a></li>
-        </ol>
-    </section>
-    <section>
-        <h3>shape</h3>
-        <ol>
-            <li><a href="./shape/wave.html">wave header</a></li>
-            <li><a href="./shape/curvedHeader.html">curved header</a></li>
-            <li><a href="./shape/triangle.html">triangle</a></li>
+        <div class="flex-1 py-4 m-4 border border-gray-200 shadow">
+            <h3 class="px-4 text-xl text-blue-600 font-bold capitalize tracking-widest">text</h3>
+            <ol class="mt-2 list-inside list-decimal">
+                <li class="px-4  hover:text-blue-600"><a href="./text/text-typing.html">text-typing</a>
+                </li>
+                <li class="px-4  hover:text-blue-600"><a href="./text/text-shadow.html">text-shadow</a>
+                </li>
+                <li class="px-4  hover:text-blue-600"><a href="./text/text-clip.html">text-clip</a></li>
+                <li class="px-4  hover:text-blue-600"><a href="./text/text-growing.html">text-growing</a>
+                </li>
 
-        </ol>
-    </section>
-    <section>
-        <h3>scroll</h3>
-        <ol>
-            <li><a href="./scroll/scrollSpy.html">scroll spy</a></li>
-            <li><a href="./scroll/scrollNav.html">scroll nav</a></li>
-            <li><a href="./scroll/scrollDown.html">scroll down</a></li>
-
-        </ol>
-    </section>
-
-    <section>
-        <h3>text</h3>
-        <ol>
-            <li><a href="./text/text-typing.html">text-typing</a></li>
-            <li><a href="./text/text-shadow.html">text-shadow</a></li>
-            <li><a href="./text/text-clip.html">text-clip</a></li>
-
-        </ol>
-    </section>
+            </ol>
+        </div>
+    </main>
 
 </body>
 

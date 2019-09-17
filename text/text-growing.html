@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>text growing</title>
+    <link rel="stylesheet" href="../css/all.css">
+    <style>
+        ul {
+            font-size: 4rem;
+            letter-spacing: .5rem;
+        }
+
+        li {
+            animation: growing 1.4s linear infinite;
+        }
+
+        @keyframes growing {
+            0% {
+                color: #4a5568;
+                text-shadow: none;
+            }
+
+            90% {
+                color: #4a5568;
+                text-shadow: none;
+            }
+
+            100% {
+                color: #ff0;
+                text-shadow: 0 0 .5rem #ff0, 0 0 3rem #ff0;
+            }
+        }
+
+        li:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        li:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        li:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        li:nth-child(4) {
+            animation-delay: 0.6s;
+        }
+
+        li:nth-child(5) {
+            animation-delay: 0.8s;
+        }
+
+        li:nth-child(6) {
+            animation-delay: 1s;
+        }
+
+        li:nth-child(7) {
+            animation-delay: 1.2s;
+        }
+
+    </style>
+</head>
+
+<body class="min-h-screen flex items-center justify-center bg-gray-800">
+    <ul class="flex text-gray-700">
+        <li>L</li>
+        <li>O</li>
+        <li>A</li>
+        <li>D</li>
+        <li>I</li>
+        <li>N</li>
+        <li>G</li>
+    </ul>
+</body>
+
+</html>
