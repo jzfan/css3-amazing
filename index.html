@@ -117,28 +117,162 @@
             left: 1rem;
             bottom: 0;
             width: 2rem;
+            height: 2rem;
+            opacity: 0;
             animation: fly 3s ease-in-out;
             animation-delay: 2s;
             animation-fill-mode: forwards;
         }
 
         @keyframes fly {
+            30% {
+                opacity: 1;
+                left: 1rem;
+            }
+
             to {
-                bottom: 0.5rem;
+                opacity: 1;
                 left: 100vw;
+            }
+        }
+
+        #logo>path:nth-child(1) {
+            stroke-dasharray: 508;
+            stroke-dashoffset: 508;
+            animation: line 2s ease forwards;
+        }
+
+        #logo>path:nth-child(2) {
+            stroke-dasharray: 494;
+            stroke-dashoffset: 494;
+            animation: line 2s ease forwards .3s;
+        }
+
+        #logo>path:nth-child(3) {
+            stroke-dasharray: 494;
+            stroke-dashoffset: 494;
+            animation: line 2s ease forwards .6s;
+        }
+
+        #logo>path:nth-child(4) {
+            stroke-dasharray: 511;
+            stroke-dashoffset: 511;
+            animation: line 2s ease forwards .9s;
+        }
+
+        #logo>path:nth-child(5) {
+            stroke-dasharray: 490;
+            stroke-dashoffset: 490;
+            animation: line 2s ease forwards 1.2s;
+        }
+
+        #logo>path:nth-child(6) {
+            stroke-dasharray: 755;
+            stroke-dashoffset: 755;
+            animation: line 2s ease forwards 1.5s;
+        }
+
+        #logo>path:nth-child(7) {
+            stroke-dasharray: 490;
+            stroke-dashoffset: 490;
+            animation: line 2s ease forwards 1.8s;
+        }
+
+        #logo>path:nth-child(8) {
+            stroke-dasharray: 453;
+            stroke-dashoffset: 453;
+            animation: line 2s ease forwards 2.1s;
+        }
+
+        #logo>path:nth-child(9) {
+            stroke-dasharray: 227;
+            stroke-dashoffset: 227;
+            animation: line 2s ease forwards 2.4s;
+        }
+
+        #logo>path:nth-child(10) {
+            stroke-dasharray: 604;
+            stroke-dashoffset: 604;
+            animation: line 2s ease forwards 2.7s;
+        }
+
+        #logo>path:nth-child(11) {
+            stroke-dasharray: 635;
+            stroke-dashoffset: 635;
+            animation: line 2s ease forwards 3s;
+        }
+
+        @keyframes line {
+            to {
+                stroke-dashoffset: 0;
             }
         }
 
     </style>
 </head>
 
-
-
 <body class="min-h-screen pb-8 text-gray-400">
 
-    <header class="relative w-full flex items-center justify-center bg-jigsaw overflow-hidden">
-        <h1 class="py-24 text-3xl font-bold tracking-wider text-blue-400">CSS3 AMAZING</h1>
-        <img class='plane' src="../img/plane.png" alt="">
+    <header class="relative w-full flex items-center justify-center bg-jigsaw overflow-hidden py-24">
+        <svg class="w-8 h-8 fill-current text-blue-500" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M512 512zM280.2 328.1H648l-8.8 102H398.1l8 99.9h224.6l-11.2 128.2-106.9 29.7h-0.1l-0.2-0.6L405.2 657l-6.9-79h-96.4l13.5 155.4 196.7 56.4 197.1-56.2L753 230.2H272.2z">
+            </path>
+            </path>
+            <path
+                d="M128.3 64.3l69.8 806 313.4 89.3 314.3-89.3 69.9-806H128.3z m637.6 756.5l-254.3 72.3L258 820.8l-60-692.5h628l-60.1 692.5z">
+            </path>
+        </svg>
+        <!-- <h1 class="ml-2 py-24 text-3xl font-bold tracking-wider text-blue-400">CSS3 AMAZING</h1> -->
+        <svg id='logo' class="ml-2 stroke-current text-blue-400" width="300" height="35.5" viewBox="0 0 1020 119"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M5.19238 61.747C5.19238 51.955 7.40038 43.171 11.8164 35.395C16.2324 27.523 22.2324 21.379 29.8164 16.963C37.4964 12.547 45.9924 10.339 55.3044 10.339C66.2484 10.339 75.8004 12.979 83.9604 18.259C92.1204 23.539 98.0724 31.027 101.816 40.723H86.1204C83.3364 34.675 79.3044 30.019 74.0244 26.755C68.8404 23.491 62.6004 21.859 55.3044 21.859C48.2964 21.859 42.0084 23.491 36.4404 26.755C30.8724 30.019 26.5044 34.675 23.3364 40.723C20.1684 46.675 18.5844 53.683 18.5844 61.747C18.5844 69.715 20.1684 76.723 23.3364 82.771C26.5044 88.723 30.8724 93.331 36.4404 96.595C42.0084 99.859 48.2964 101.491 55.3044 101.491C62.6004 101.491 68.8404 99.907 74.0244 96.739C79.3044 93.475 83.3364 88.819 86.1204 82.771H101.816C98.0724 92.371 92.1204 99.811 83.9604 105.091C75.8004 110.275 66.2484 112.867 55.3044 112.867C45.9924 112.867 37.4964 110.707 29.8164 106.387C22.2324 101.971 16.2324 95.875 11.8164 88.099C7.40038 80.323 5.19238 71.539 5.19238 61.747Z"
+                stroke-width="5" mask="url(#path-1-outside-1)" />
+            <path
+                d="M150.699 113.011C144.075 113.011 138.123 111.859 132.843 109.555C127.659 107.155 123.579 103.891 120.603 99.763C117.627 95.539 116.091 90.691 115.995 85.219H129.963C130.443 89.923 132.363 93.907 135.723 97.171C139.179 100.339 144.171 101.923 150.699 101.923C156.939 101.923 161.835 100.387 165.387 97.315C169.035 94.147 170.859 90.115 170.859 85.219C170.859 81.379 169.803 78.259 167.691 75.859C165.579 73.459 162.939 71.635 159.771 70.387C156.603 69.139 152.331 67.795 146.955 66.355C140.331 64.627 135.003 62.899 130.971 61.171C127.035 59.443 123.627 56.755 120.747 53.107C117.963 49.363 116.571 44.371 116.571 38.131C116.571 32.659 117.963 27.811 120.747 23.587C123.531 19.363 127.419 16.099 132.411 13.795C137.499 11.491 143.307 10.339 149.835 10.339C159.243 10.339 166.923 12.691 172.875 17.395C178.923 22.099 182.331 28.339 183.099 36.115H168.699C168.219 32.275 166.203 28.915 162.651 26.035C159.099 23.059 154.395 21.571 148.539 21.571C143.067 21.571 138.603 23.011 135.147 25.891C131.691 28.675 129.963 32.611 129.963 37.699C129.963 41.347 130.971 44.323 132.987 46.627C135.099 48.931 137.643 50.707 140.619 51.955C143.691 53.107 147.963 54.451 153.435 55.987C160.059 57.811 165.387 59.635 169.419 61.459C173.451 63.187 176.907 65.923 179.787 69.667C182.667 73.315 184.107 78.307 184.107 84.643C184.107 89.539 182.811 94.147 180.219 98.467C177.627 102.787 173.787 106.291 168.699 108.979C163.611 111.667 157.611 113.011 150.699 113.011Z"
+                stroke-width="5" mask="url(#path-1-outside-1)" />
+            <path
+                d="M232.766 113.011C226.142 113.011 220.19 111.859 214.91 109.555C209.726 107.155 205.646 103.891 202.67 99.763C199.694 95.539 198.158 90.691 198.062 85.219H212.03C212.51 89.923 214.43 93.907 217.79 97.171C221.246 100.339 226.238 101.923 232.766 101.923C239.006 101.923 243.902 100.387 247.454 97.315C251.102 94.147 252.926 90.115 252.926 85.219C252.926 81.379 251.87 78.259 249.758 75.859C247.646 73.459 245.006 71.635 241.838 70.387C238.67 69.139 234.398 67.795 229.022 66.355C222.398 64.627 217.07 62.899 213.038 61.171C209.102 59.443 205.694 56.755 202.814 53.107C200.03 49.363 198.638 44.371 198.638 38.131C198.638 32.659 200.03 27.811 202.814 23.587C205.598 19.363 209.486 16.099 214.478 13.795C219.566 11.491 225.374 10.339 231.902 10.339C241.31 10.339 248.99 12.691 254.942 17.395C260.99 22.099 264.398 28.339 265.166 36.115H250.766C250.286 32.275 248.27 28.915 244.718 26.035C241.166 23.059 236.462 21.571 230.606 21.571C225.134 21.571 220.67 23.011 217.214 25.891C213.758 28.675 212.03 32.611 212.03 37.699C212.03 41.347 213.038 44.323 215.054 46.627C217.166 48.931 219.71 50.707 222.686 51.955C225.758 53.107 230.03 54.451 235.502 55.987C242.126 57.811 247.454 59.635 251.486 61.459C255.518 63.187 258.974 65.923 261.854 69.667C264.734 73.315 266.174 78.307 266.174 84.643C266.174 89.539 264.878 94.147 262.286 98.467C259.694 102.787 255.854 106.291 250.766 108.979C245.678 111.667 239.678 113.011 232.766 113.011Z"
+                stroke-width="5" mask="url(#path-1-outside-1)" />
+            <path
+                d="M280.562 34.099C281.234 25.267 284.642 18.355 290.786 13.363C296.93 8.371 304.898 5.875 314.69 5.875C321.218 5.875 326.834 7.075 331.538 9.47501C336.338 11.779 339.938 14.947 342.338 18.979C344.834 23.011 346.082 27.571 346.082 32.659C346.082 38.611 344.354 43.747 340.898 48.067C337.538 52.387 333.122 55.171 327.65 56.419V57.139C333.89 58.675 338.834 61.699 342.482 66.211C346.13 70.723 347.954 76.627 347.954 83.923C347.954 89.395 346.706 94.339 344.21 98.755C341.714 103.075 337.97 106.483 332.978 108.979C327.986 111.475 321.986 112.723 314.978 112.723C304.802 112.723 296.45 110.083 289.922 104.803C283.394 99.427 279.746 91.843 278.978 82.051H291.65C292.322 87.811 294.674 92.515 298.706 96.163C302.738 99.811 308.114 101.635 314.834 101.635C321.554 101.635 326.642 99.907 330.098 96.451C333.65 92.899 335.426 88.339 335.426 82.771C335.426 75.571 333.026 70.387 328.226 67.219C323.426 64.051 316.178 62.467 306.482 62.467H303.17V51.523H306.626C315.458 51.427 322.13 49.987 326.642 47.203C331.154 44.323 333.41 39.907 333.41 33.955C333.41 28.867 331.73 24.787 328.37 21.715C325.106 18.643 320.402 17.107 314.258 17.107C308.306 17.107 303.506 18.643 299.858 21.715C296.21 24.787 294.05 28.915 293.378 34.099H280.562Z"
+                stroke-width="5" mask="url(#path-1-outside-1)" />
+            <path
+                d="M460.63 89.683H416.854L408.79 112.003H394.966L431.254 12.211H446.374L482.518 112.003H468.694L460.63 89.683ZM456.886 79.027L438.742 28.339L420.598 79.027H456.886Z"
+                stroke-width="5" mask="url(#path-1-outside-1)" />
+            <path
+                d="M597.693 12.355V112.003H584.589V37.699L551.469 112.003H542.253L508.989 37.555V112.003H495.885V12.355H509.997L546.861 94.723L583.725 12.355H597.693Z"
+                stroke-width="5" mask="url(#path-1-outside-1)" />
+            <path
+                d="M676.796 89.683H633.02L624.956 112.003H611.132L647.42 12.211H662.54L698.684 112.003H684.86L676.796 89.683ZM673.052 79.027L654.908 28.339L636.764 79.027H673.052Z"
+                stroke-width="5" mask="url(#path-1-outside-1)" />
+            <path
+                d="M723.139 100.627H772.099V112.003H707.587V101.635L756.259 23.011H708.163V11.635H771.811V22.003L723.139 100.627Z"
+                stroke-width="5" mask="url(#path-1-outside-1)" />
+            <path d="M800.614 11.635V112.003H787.51V11.635H800.614Z" stroke-width="5" mask="url(#path-1-outside-1)" />
+            <path
+                d="M899.411 112.003H886.307L833.603 32.083V112.003H820.499V11.491H833.603L886.307 91.267V11.491H899.411V112.003Z"
+                stroke-width="5" mask="url(#path-1-outside-1)" />
+            <path
+                d="M995.333 40.723C992.549 34.867 988.517 30.355 983.237 27.187C977.957 23.923 971.813 22.291 964.805 22.291C957.797 22.291 951.461 23.923 945.797 27.187C940.229 30.355 935.813 34.963 932.549 41.011C929.381 46.963 927.797 53.875 927.797 61.747C927.797 69.619 929.381 76.531 932.549 82.483C935.813 88.435 940.229 93.043 945.797 96.307C951.461 99.475 957.797 101.059 964.805 101.059C974.597 101.059 982.661 98.131 988.997 92.275C995.333 86.419 999.029 78.499 1000.09 68.515H960.053V57.859H1014.05V67.939C1013.29 76.195 1010.69 83.779 1006.28 90.691C1001.86 97.507 996.053 102.931 988.853 106.963C981.653 110.899 973.637 112.867 964.805 112.867C955.493 112.867 946.997 110.707 939.317 106.387C931.637 101.971 925.541 95.875 921.029 88.099C916.613 80.323 914.405 71.539 914.405 61.747C914.405 51.955 916.613 43.171 921.029 35.395C925.541 27.523 931.637 21.427 939.317 17.107C946.997 12.691 955.493 10.483 964.805 10.483C975.461 10.483 984.869 13.123 993.029 18.403C1001.28 23.683 1007.28 31.123 1011.03 40.723H995.333Z"
+                stroke-width="5" mask="url(#path-1-outside-1)" />
+        </svg>
+
+        <svg class='plane' viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M746.666667 512H533.333333a21.290667 21.290667 0 0 1-17.344-8.938667l-213.333333-298.666666A21.333333 21.333333 0 0 1 320 170.666667h85.333333c5.162667 0 10.176 1.877333 14.037334 5.290666l341.333333 298.666667A21.333333 21.333333 0 0 1 746.666667 512z"
+                fill="#B3B3B3"></path>
+            <path
+                d="M405.333333 938.666667h-85.333333a21.333333 21.333333 0 0 1-17.749333-33.173334l213.333333-320A21.333333 21.333333 0 0 1 533.333333 576h234.666667a21.354667 21.354667 0 0 1 14.101333 37.333333l-362.666666 320A21.333333 21.333333 0 0 1 405.333333 938.666667z"
+                fill="#E6E6E6"></path>
+            <path
+                d="M832 405.333333H234.56c-11.733333 0-26.666667-7.616-33.664-17.429333l-81.792-114.474667C112.234667 263.808 97.216 256 85.141333 256H42.858667c-11.882667 0-18.688 9.237333-15.253334 20.394667l72.789334 236.544c3.456 11.264 15.168 23.957333 25.962666 28.266666l173.952 69.589334c10.88 4.352 29.290667 7.872 40.96 7.872H832c85.333333 0 170.666667-53.333333 170.666667-106.666667s-85.333333-106.666667-170.666667-106.666667z"
+                fill="#D8D8D8"></path>
+            <path d="M394.666667 501.333333m-32 0a32 32 0 1 0 64 0 32 32 0 1 0-64 0Z" fill="#5B5B5B"></path>
+            <path d="M565.333333 501.333333m-32 0a32 32 0 1 0 64 0 32 32 0 1 0-64 0Z" fill="#5B5B5B"></path>
+            <path d="M736 501.333333m-32 0a32 32 0 1 0 64 0 32 32 0 1 0-64 0Z" fill="#5B5B5B"></path>
+        </svg>
     </header>
 
     <main class="container mx-auto flex flex-wrap justify-around whitespace-no-wrap">
@@ -165,15 +299,15 @@
             <span></span>
             <h3 class="px-4 text-xl text-blue-300 font-bold capitalize tracking-widest">box</h3>
             <ol class="relative z-10 text-lg mt-2 list-inside list-decimal">
+                <li class="px-4  hover:text-gray-100"><a href="./box/cardsHover.html">cardsHover</a></li>
+                <li class="px-4  hover:text-gray-100"><a href="./box/image-gallery.html">image-gallery</a>
                 <li class="px-4  hover:text-gray-100"><a href="./box/box.html">icon-box</a></li>
                 <li class="px-4  hover:text-gray-100"><a href="./box/icon-box2.html">icon-box2</a></li>
                 <li class="px-4  hover:text-gray-100"><a href="./box/shoe.html">shoe</a></li>
                 <li class="px-4  hover:text-gray-100"><a href="./box/skewBorderBox.html">skew border
                         box</a>
                 </li>
-                <li class="px-4  hover:text-gray-100"><a href="./box/image-gallery.html">image-gallery</a>
                 </li>
-                <li class="px-4  hover:text-gray-100"><a href="./box/cardsHover.html">cardsHover</a></li>
             </ol>
         </div>
 
@@ -184,9 +318,6 @@
             <span></span>
             <h3 class="px-4 text-xl text-blue-300 font-bold capitalize tracking-widest">button</h3>
             <ol class="relative z-10 text-lg mt-2 list-inside list-decimal">
-                <li class="px-4  hover:text-gray-100"><a href="./button/button-power.html">power
-                        switch</a>
-                </li>
                 <li class="px-4  hover:text-gray-100"><a href="./button/button-hover.html">button
                         hover</a>
                 </li>
@@ -196,14 +327,17 @@
                 <li class="px-4  hover:text-gray-100"><a href="./button/button-hover-3.html">button hover
                         3</a>
                 </li>
-                <li class="px-4  hover:text-gray-100"><a href="./button/glassButton.html">glass botton</a>
-                </li>
-                <li class="px-4  hover:text-gray-100"><a href="./button/dropdown.html">dropdown</a></li>
-                <li class="px-4  hover:text-gray-100"><a href="./button/toggle.html">toggle button</a>
-                </li>
                 <li class="px-4  hover:text-gray-100"><a href="./button/checkbox-day-night.html">checkbox
                         day
                         night</a></li>
+                <li class="px-4  hover:text-gray-100"><a href="./button/dropdown.html">dropdown</a></li>
+                <li class="px-4  hover:text-gray-100"><a href="./button/glassButton.html">glass botton</a>
+                </li>
+                <li class="px-4  hover:text-gray-100"><a href="./button/button-power.html">power
+                        switch</a>
+                </li>
+                <li class="px-4  hover:text-gray-100"><a href="./button/toggle.html">toggle button</a>
+                </li>
             </ol>
         </div>
 
@@ -236,17 +370,17 @@
             <span></span>
             <h3 class="px-4 text-xl text-blue-300 font-bold capitalize tracking-widest">image</h3>
             <ol class="relative z-10 text-lg mt-2 list-inside list-decimal">
+                <li class="px-4  hover:text-gray-100"><a href="./image/3DflapImg.html">3d flap image</a>
                 <li class="px-4  hover:text-gray-100"><a href="./image/hover-long-image.html">hover-long-image</a>
+                </li>
+                <li class="px-4  hover:text-gray-100"><a href="./image/image-distortion.html">image-distortion</a>
                 </li>
                 <li class="px-4  hover:text-gray-100"><a href="./image/layered-image.html">layered
                         image</a>
                 </li>
-                <li class="px-4  hover:text-gray-100"><a href="./image/3DflapImg.html">3d flap image</a>
+                <li class="px-4  hover:text-gray-100"><a href="./image/lazeLoading.html">laze loading</a>
                 </li>
                 <li class="px-4  hover:text-gray-100"><a href="./image/slider.html">slider</a></li>
-                <li class="px-4  hover:text-gray-100"><a href="./image/image-distortion.html">image-distortion</a>
-                </li>
-                <li class="px-4  hover:text-gray-100"><a href="./image/lazeLoading.html">laze loading</a>
                 </li>
             </ol>
         </div>
@@ -257,11 +391,11 @@
             <span></span>
             <h3 class="px-4 text-xl text-blue-300 font-bold capitalize tracking-widest">other</h3>
             <ol class="relative z-10 text-lg mt-2 list-inside list-decimal">
-                <li class="px-4  hover:text-gray-100"><a href="./other/login.html">login form</a></li>
-                <li class="px-4  hover:text-gray-100"><a href="./other/street.html">spot</a></li>
                 <li class="px-4  hover:text-gray-100"><a href="./other/linear-gradient.html">linear
                         gradient</a>
                 </li>
+                <li class="px-4  hover:text-gray-100"><a href="./other/login.html">login form</a></li>
+                <li class="px-4  hover:text-gray-100"><a href="./other/street.html">spot</a></li>
             </ol>
         </div>
 
@@ -285,12 +419,11 @@
             <span></span>
             <h3 class="px-4 text-xl text-blue-300 font-bold capitalize tracking-widest">shape</h3>
             <ol class="relative z-10 text-lg mt-2 list-inside list-decimal">
-                <li class="px-4  hover:text-gray-100"><a href="./shape/wave.html">wave header</a></li>
                 <li class="px-4  hover:text-gray-100"><a href="./shape/curvedHeader.html">curved
                         header</a>
                 </li>
                 <li class="px-4  hover:text-gray-100"><a href="./shape/triangle.html">triangle</a></li>
-
+                <li class="px-4  hover:text-gray-100"><a href="./shape/wave.html">wave header</a></li>
             </ol>
         </div>
         <div class="flex-1 py-4 m-4  shadow">
@@ -300,13 +433,12 @@
             <span></span>
             <h3 class="px-4 text-xl text-blue-300 font-bold capitalize tracking-widest">scroll</h3>
             <ol class="relative z-10 text-lg mt-2 list-inside list-decimal">
-                <li class="px-4  hover:text-gray-100"><a href="./scroll/scrollSpy.html">scroll spy</a>
+                <li class="px-4  hover:text-gray-100"><a href="./scroll/scrollDown.html">scroll down</a>
                 </li>
                 <li class="px-4  hover:text-gray-100"><a href="./scroll/scrollNav.html">scroll nav</a>
                 </li>
-                <li class="px-4  hover:text-gray-100"><a href="./scroll/scrollDown.html">scroll down</a>
+                <li class="px-4  hover:text-gray-100"><a href="./scroll/scrollSpy.html">scroll spy</a>
                 </li>
-
             </ol>
         </div>
 
@@ -317,18 +449,24 @@
             <span></span>
             <h3 class="px-4 text-xl text-blue-300 font-bold capitalize tracking-widest">text</h3>
             <ol class="relative z-10 text-lg mt-2 list-inside list-decimal">
-                <li class="px-4  hover:text-gray-100"><a href="./text/text-typing.html">text-typing</a>
-                </li>
-                <li class="px-4  hover:text-gray-100"><a href="./text/text-shadow.html">text-shadow</a>
-                </li>
                 <li class="px-4  hover:text-gray-100"><a href="./text/text-clip.html">text-clip</a></li>
                 <li class="px-4  hover:text-gray-100"><a href="./text/text-growing.html">text-growing</a>
                 </li>
-
+                <li class="px-4  hover:text-gray-100"><a href="./text/text-logo.html">text-logo</a>
+                </li>
+                <li class="px-4  hover:text-gray-100"><a href="./text/text-shadow.html">text-shadow</a>
+                </li>
+                <li class="px-4  hover:text-gray-100"><a href="./text/text-typing.html">text-typing</a>
+                </li>
             </ol>
         </div>
     </main>
-
+    <script>
+        let letters = document.querySelectorAll('#logo>path')
+        letters.forEach((letter, i) => {
+            console.log(i, letter.getTotalLength())
+        });
+    </script>
 </body>
 
 </html>
