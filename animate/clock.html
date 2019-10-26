@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/all.css">
+    <title>Clock</title>
+    <style>
+        section {
+            width: 350px;
+            height: 350px;
+            border: 20px solid #fff;
+            box-shadow: inset 0 0 30px rgba(0, 0, 0, .1),
+                0 20px 20px rgba(0, 0, 0, .2);
+            background: #fff url(../img/clock.png);
+            background-size: cover;
+        }
+
+        section::before {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: #848484;
+            border: 2px solid #fff;
+            z-index: 100;
+            border-radius: 50%;
+        }
+
+        .hour,
+        .min,
+        .sec {
+            position: absolute;
+        }
+
+        .hour,
+        .hr {
+            width: 160px;
+            height: 160px;
+        }
+
+        .min,
+        .mn {
+            width: 190px;
+            height: 190px;
+        }
+
+        .sec,
+        .sc {
+            width: 230px;
+            height: 230px;
+        }
+
+        .hr,
+        .mn,
+        .sc {
+            display: flex;
+            justify-content: center;
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .hr::before {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 80px;
+            background: #848484;
+            z-index: 10;
+            border-radius: 6px 6px 0 0;
+        }
+
+        .mn::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 90px;
+            background: #d6d6d6;
+            z-index: 11;
+            border-radius: 6px 6px 0 0;
+        }
+
+        .sc::before {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 150px;
+            background: #ff6767;
+            z-index: 12;
+            border-radius: 6px 6px 0 0;
+        }
+
+    </style>
+</head>
+
+<body>
+    <main class="bg-blue-400 min-h-screen flex items-center justify-center">
+        <section class="relative rounded-full flex justify-center items-center">
+            <div class="hour">
+                <div class="hr"></div>
+            </div>
+            <div class="min">
+                <div class="mn"></div>
+            </div>
+            <div class="sec">
+                <div class="sc"></div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const hr = document.querySelector('.hr')
+        const mn = document.querySelector('.mn')
+        const sc = document.querySelector('.sc')
+        setInterval(() => {
+            let day = new Date()
+            let hh = day.getHours() * 30
+            let mm = day.getMinutes() * 6
+            let ss = day.getSeconds() * 6
+            hr.style.transform = `rotateZ(${hh + (mm / 12)}deg)`
+            mn.style.transform = `rotateZ(${mm}deg)`
+            sc.style.transform = `rotateZ(${ss}deg)`
+        });
+    </script>
+</body>
+
+</html>

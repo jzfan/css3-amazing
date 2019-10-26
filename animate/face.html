@@ -7,14 +7,55 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/all.css">
     <title>face</title>
+    <style>
+        #mouth {
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            border-bottom-left-radius: 3.25rem;
+            border-bottom-right-radius: 3.25rem;
+        }
+
+        #face:hover #mouth {
+            bottom: 3rem;
+            height: 1.5rem;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+    </style>
 </head>
 
 <body class="flex justify-center items-center min-h-screen bg-yellow-900">
-    <div class="relative w-64 h-64 flex justify-center items-center bg-yellow-500 rounded-full">
-        <div class="absolute ml-16 mb-8 rounded-b-full bg-yellow-700 bottom-0 left-0 w-32 h-16 transition-sm
-        hover:mb-6 
-        "></div>
+    <div id='face' class="relative w-64 h-64 bg-yellow-500 rounded-full">
+        <div id='eye' class="mt-16 mx-auto w-2/3 flex justify-between">
+            <div class="w-16 h-16 bg-white rounded-full">
+                <div class="w-8 h-8 bg-gray-900 ml-1 mt-4 rounded-full"></div>
+            </div>
+            <div class="w-16 h-16 bg-white rounded-full">
+                <div class="w-8 h-8 bg-gray-900 ml-1 mt-4 rounded-full"></div>
+            </div>
+        </div>
+        <div id='mouth' class="absolute bg-yellow-700 w-32 h-16 transition-sm"></div>
     </div>
+
+    <script>
+        let eyes = document.querySelectorAll('#eye>div')
+        document.querySelector('body').addEventListener('mousemove', eyeball)
+        function eyeball() {
+            if (!event) {
+                return false
+            }
+            eyes.forEach((eye) => {
+                let x = eye.getBoundingClientRect().left + (eye.clientWidth / 2)
+                let y = eye.getBoundingClientRect().top + (eye.clientHeight / 2)
+                let radian = Math.atan2(event.pageX - x, event.pageY - y)
+                let rot = (radian * (180 / Math.PI) * -1) + 270
+                eye.style.transform = `rotate(${rot}deg)`
+            })
+        }
+        eyeball()
+    </script>
 </body>
 
 </html>

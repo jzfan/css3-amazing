@@ -50,6 +50,12 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
@@ -80,7 +86,7 @@ a {
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
 
-b,
+
 strong {
   font-weight: bolder;
 }
@@ -90,18 +96,9 @@ strong {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 
-code {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
-}
-
 /**
  * Add the correct font size in all browsers.
  */
-
-small {
-  font-size: 80%;
-}
 
 /**
  * Prevent `sub` and `sup` elements from affecting the line height in
@@ -325,9 +322,7 @@ html {
 h1,
 h2,
 h3,
-h4,
-h5,
-h6,
+hr,
 p,
 pre {
   margin: 0;
@@ -398,6 +393,10 @@ html {
  * Ensure horizontal rules are visible by default
  */
 
+hr {
+  border-top-width: 1px;
+}
+
 /**
  * Undo the `border-style: none` reset that Normalize applies to images so that
  * our `border-{width}` utilities have the expected effect.
@@ -437,16 +436,9 @@ button,
   cursor: pointer;
 }
 
-table {
-  border-collapse: collapse;
-}
-
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
+h3 {
   font-size: inherit;
   font-weight: inherit;
 }
@@ -483,8 +475,7 @@ input {
  * 'mono' font family.
  */
 
-pre,
-code {
+pre {
   font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -498,8 +489,7 @@ code {
 
 img,
 svg,
-canvas,
-object {
+canvas {
   display: block;
   vertical-align: middle;
 }
@@ -544,16 +534,16 @@ img {
   }
 }
 
-.bg-gray-100 {
-  background-color: #f7fafc;
-}
-
-.bg-gray-200 {
-  background-color: #edf2f7;
+.bg-white {
+  background-color: #fff;
 }
 
 .bg-gray-800 {
   background-color: #2d3748;
+}
+
+.bg-gray-900 {
+  background-color: #1a202c;
 }
 
 .bg-red-700 {
@@ -572,21 +562,12 @@ img {
   background-color: #744210;
 }
 
-.border-gray-200 {
-  border-color: #edf2f7;
-}
-
-.rounded {
-  border-radius: 0.25rem;
+.bg-blue-400 {
+  background-color: #63b3ed;
 }
 
 .rounded-full {
   border-radius: 9999px;
-}
-
-.rounded-b-full {
-  border-bottom-right-radius: 9999px;
-  border-bottom-left-radius: 9999px;
 }
 
 .border {
@@ -601,17 +582,8 @@ img {
   display: inline-block;
 }
 
-.inline {
-  display: inline;
-}
-
 .flex {
-  display: -webkit-box;
   display: flex;
-}
-
-.table {
-  display: table;
 }
 
 .hidden {
@@ -623,13 +595,15 @@ img {
 }
 
 .items-center {
-  -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .justify-center {
-  -webkit-box-pack: center;
-          justify-content: center;
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
 }
 
 .justify-around {
@@ -637,23 +611,15 @@ img {
 }
 
 .flex-1 {
-  -webkit-box-flex: 1;
-          flex: 1 1 0%;
-}
-
-.flex-auto {
-  -webkit-box-flex: 1;
-          flex: 1 1 auto;
-}
-
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
+  flex: 1 1 0%;
 }
 
 .font-bold {
   font-weight: 700;
+}
+
+.h-8 {
+  height: 2rem;
 }
 
 .h-16 {
@@ -681,24 +647,24 @@ img {
   margin-right: auto;
 }
 
+.ml-1 {
+  margin-left: 0.25rem;
+}
+
 .mt-2 {
   margin-top: 0.5rem;
 }
 
-.mb-8 {
-  margin-bottom: 2rem;
+.mt-4 {
+  margin-top: 1rem;
 }
 
-.ml-16 {
-  margin-left: 4rem;
+.mt-16 {
+  margin-top: 4rem;
 }
 
 .min-h-screen {
   min-height: 100vh;
-}
-
-.overflow-auto {
-  overflow: auto;
 }
 
 .overflow-hidden {
@@ -736,44 +702,32 @@ img {
   position: relative;
 }
 
-.top-0 {
-  top: 0;
-}
-
-.right-0 {
-  right: 0;
-}
-
-.bottom-0 {
-  bottom: 0;
-}
-
-.left-0 {
-  left: 0;
-}
-
 .shadow {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.text-gray-400 {
+  color: #cbd5e0;
 }
 
 .text-gray-700 {
   color: #4a5568;
 }
 
-.text-gray-800 {
-  color: #2d3748;
+.text-blue-300 {
+  color: #90cdf4;
 }
 
-.text-blue-600 {
-  color: #3182ce;
+.text-blue-400 {
+  color: #63b3ed;
 }
 
-.text-blue-700 {
-  color: #2b6cb0;
+.hover\:text-gray-100:hover {
+  color: #f7fafc;
 }
 
-.hover\:text-blue-600:hover {
-  color: #3182ce;
+.text-lg {
+  font-size: 1.125rem;
 }
 
 .text-xl {
@@ -808,6 +762,14 @@ img {
   white-space: nowrap;
 }
 
+.w-8 {
+  width: 2rem;
+}
+
+.w-16 {
+  width: 4rem;
+}
+
 .w-32 {
   width: 8rem;
 }
@@ -816,8 +778,16 @@ img {
   width: 16rem;
 }
 
+.w-2\/3 {
+  width: 66.666667%;
+}
+
 .w-full {
   width: 100%;
+}
+
+.z-10 {
+  z-index: 10;
 }
 
 .bg-jigsaw {
@@ -825,6 +795,5 @@ img {
 }
 
 .transition-sm {
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
