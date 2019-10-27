@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../static/css/all.css">
+    <title>day or night</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <main class="flex flex-col items-center justify-around h-screen bg-gray-100">
+        <h1 class="text-3xl capitalize">Day Mode</h1>
+        <svg id='darkmode' class="w-32 h-32 fill-current text-yellow-400" viewBox="0 0 32 32" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16Z" />
+        </svg>
+    </main>
+
+    <script src="../static/js/anime.min.js"></script>
+    <script>
+        let day = {
+            title: 'day mode',
+            path: 'M32 16C32 24.8366 24.8366 32 16 32C7.16344 32 0 24.8366 0 16C0 7.16344 7.16344 0 16 0C24.8366 0 32 7.16344 32 16Z',
+            bg: '#f7fafc',
+            color: '#4a5568'
+        }
+        let night = {
+            title: 'night mode',
+            path: 'M10.5 16C10.5 24.8366 16 32 16 32C7.16344 32 0 24.8366 0 16C0 7.16344 7.16344 -1.90735e-06 16 -1.90735e-06C16 -1.90735e-06 10.5 7.16344 10.5 16Z',
+            bg: '#4a5568',
+            color: '#f7fafc'
+        }
+        let isNight = false
+        let svg = document.querySelector('svg')
+        let title = document.querySelector('h1')
+        svg.addEventListener('click', () => {
+            let mode = isNight ? day : night
+            title.innerHTML = mode.title
+            anime.timeline({
+                duration: 750,
+                easing: "easeOutExpo"
+            }).add({
+                targets: "svg path",
+                d: mode.path
+            }).add({
+                targets: "svg",
+                rotate: [0, 320]
+            }, '-=350')
+                .add({
+                    targets: 'main',
+                    backgroundColor: mode.bg,
+                    color: mode.color
+                }, '-=700')
+
+            isNight = !isNight
+        })
+        // console.log(main.classList.value)
+    </script>
+</body>
+
+</html>

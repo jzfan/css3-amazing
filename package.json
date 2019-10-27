@@ -5,8 +5,8 @@
     "main": "postcss.config.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "NODE_ENV=development postcss css/tailwind.css -o css/all.css",
-        "build": "NODE_ENV=production postcss css/tailwind.css -o css/all.css"
+        "dev": "NODE_ENV=development postcss static/css/tailwind.css -o static/css/all.css",
+        "build": "NODE_ENV=production postcss static/css/tailwind.css -o static/css/all.css"
     },
     "repository": {
         "type": "git",
