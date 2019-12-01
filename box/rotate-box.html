@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>rotate-box</title>
+    <link rel="stylesheet" href="../static/css/all.css">
+    <style>
+        .w-100 {
+            width: 25rem;
+        }
+
+        .h-100 {
+            height: 25rem;
+        }
+
+        section span {
+            border-radius: 38% 62% 63% 37% /41% 44% 56% 59%;
+        }
+
+        section:nth-child(1):hover span {
+            border: 0;
+            background-color: rgba(50, 50, 180, .8);
+        }
+
+        section:hover span:nth-child(1) {
+            /* transition: .5s; */
+            animation: roll 6s linear infinite;
+        }
+
+        section:hover span:nth-child(2) {
+            /* transition: .5s; */
+            animation: roll 4s linear infinite;
+        }
+
+        section:hover span:nth-child(3) {
+            /* transition: .5s; */
+            animation: roll2 10s linear infinite;
+        }
+
+        @keyframes roll {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes roll2 {
+            0% {
+                transform: rotate(360deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        a {
+            border-radius: 73% 27% 44% 56% / 49% 44% 56% 51%;
+        }
+
+        a:hover {
+            background-color: white;
+            color: #333;
+        }
+
+    </style>
+</head>
+
+<body class="flex items-center justify-center min-h-screen bg-gray-900 text-gray-300">
+    <section class="mx-4 relative w-100 h-100 flex justify-center items-center">
+        <span class="absolute inset-0 border-2 border-circle"></span>
+        <span class="absolute inset-0 border-2 border-circle"></span>
+        <span class="absolute inset-0 border-2 border-circle"></span>
+        <div class="relative z-10 px-16 py-10 text-center">
+            <h2 class="text-2xl">Post Title</h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta praesentium corrupti ipsum earum fugiat
+                a porro esse molestiae, expedita magni ullam distinctio odit asperiores impedit repellendus eum ad neque
+                sed!
+            </p>
+            <a href="#" class="inline-block mt-3 border-2 px-4 py-1 font-medium">Read More</a>
+        </div>
+    </section>
+
+    <section class="mx-4 relative w-100 h-100 flex justify-center items-center">
+        <span class="absolute inset-0 border-2 border-circle"></span>
+        <span class="absolute inset-0 border-2 border-circle"></span>
+        <span class="absolute inset-0 border-2 border-circle"></span>
+        <div class="relative z-10 px-16 py-10 text-center">
+            <h2 class="text-2xl">Post Title</h2>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta praesentium corrupti ipsum earum fugiat
+                a porro esse molestiae, expedita magni ullam distinctio odit asperiores impedit repellendus eum ad neque
+                sed!
+            </p>
+            <a href="#" class="inline-block mt-3 border-2 px-4 py-1 font-medium">Read More</a>
+        </div>
+    </section>
+</body>
+
+</html>

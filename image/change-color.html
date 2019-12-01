@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>change color</title>
+    <link rel="stylesheet" href="../static/css/all.css">
+    <style>
+        #bg {
+            mix-blend-mode: hue;
+        }
+
+    </style>
+</head>
+
+<body>
+    <img class="w-full h-screen object-cover" src="../static/img/yellow-flower.jpg" alt="">
+    <div id='bg' class="absolute inset-0">
+    </div>
+</body>
+<script>
+    let bg = document.getElementById('bg')
+    function randomColor() {
+        return Math.floor(Math.random() * 255)
+    }
+    bg.addEventListener('click', () => {
+        bg.style.backgroundColor = 'rgba(' + randomColor() + ',' + randomColor() + ',' + randomColor() + ')'
+    })
+</script>
+
+</html>
