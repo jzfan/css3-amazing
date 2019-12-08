@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../static/css/all.css">
+    <title>creative text</title>
+
+    <style>
+        h1 span {
+            display: inline-block;
+            opacity: 0;
+            animation: jump 3.5s linear forwards;
+        }
+
+        @keyframes jump {
+            0% {
+                transform: scale(50) translateX(-50px);
+                opacity: 0;
+            }
+
+            2% {
+                opacity: 1;
+            }
+
+            10%,
+            90% {
+                transform: scale(1) translateX(0);
+                opacity: 1;
+            }
+
+            98% {
+                opacity: 1;
+            }
+
+            98% {
+                transform: scale(50) translateX(0);
+                opacity: 0;
+            }
+        }
+
+        span:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        span:nth-child(4) {
+            animation-delay: 0.6s;
+        }
+
+        span:nth-child(5) {
+            animation-delay: 0.8s;
+        }
+
+        span:nth-child(6) {
+            animation-delay: 1s;
+        }
+
+        span:nth-child(7) {
+            animation-delay: 1.2s;
+        }
+
+        span:nth-child(8) {
+            animation-delay: 1.4s;
+        }
+
+        span:nth-child(9) {
+            animation-delay: 1.6s;
+        }
+
+        h1 {
+            animation: animH 1.5s linear forwards;
+            animation-delay: 5s;
+        }
+
+        @keyframes animH {
+            0% {
+                background: #fff;
+            }
+
+            50% {
+                background: #000;
+                transform: scale(50);
+            }
+
+            100% {
+                background: #000;
+                transform: scale(100);
+            }
+        }
+
+        img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(5);
+            animation: animImg 1s linear forwards;
+            animation-delay: 6s;
+        }
+
+        @keyframes animImg {
+            0% {
+                transform: translate(-50%, -50%) scale(5);
+                opacity: 0;
+            }
+
+            50%,
+            100% {
+                transform: translate(-50%, -50%) scale(.4);
+                opacity: 1;
+            }
+        }
+
+    </style>
+</head>
+
+<body class="h-screen flex items-center justify-center overflow-hidden">
+    <h1 class="text-4xl">
+        <span>C<br>C</span>
+        <span>R<br>R</span>
+        <span>E<br>E</span>
+        <span>A<br>A</span>
+        <span>T<br>T</span>
+        <span>I<br>I</span>
+        <span>V<br>O</span>
+        <span>E<br>N</span>
+        <span> <br>S</span>
+    </h1>
+    <img src="../static/img/fantastic.jpg">
+</body>
+
+</html>
