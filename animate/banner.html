@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://fonts.goolgeapis.com/css?family=Tangerine">
+    <link rel="stylesheet" href="../static/css/all.css">
+    <title>Banner Animation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Tangerine', cursive;
+        }
+
+        main {
+            background: linear-gradient(#ffeb3b, #e91e63);
+        }
+
+        main h2 {
+            text-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        main h2::before {
+            content: '';
+            position: absolute;
+            top: -44px;
+            left: -100px;
+            width: 200px;
+            height: 200px;
+            background: transparent;
+            border-left: 15px solid white;
+            border-radius: 50%;
+            transform: rotate(-30deg);
+            box-shadow: -14px 1px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        main section {
+            height: 400px;
+            background: url('../static/img/mosque.png');
+            background-repeat: repeat-x;
+            background-size: 1200px;
+            animation: animate 20s linear infinite;
+        }
+
+        @keyframes animate {
+            from {
+                background-position: 0%;
+            }
+
+            to {
+                background-position: 1200px;
+            }
+        }
+
+        main section::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 600px;
+            opacity: 0.1;
+            background: url('../static/img/mosque.png');
+            background-repeat: repeat-x;
+            background-size: 1600px;
+            animation: animateReverse 40s linear infinite;
+        }
+
+        @keyframes animateReverse {
+            from {
+                background-position: 1600px;
+            }
+
+            to {
+                background-position: 0%;
+            }
+        }
+
+        .particles-js-canvas-el {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+    </style>
+</head>
+
+<body class="flex justify-center items-center h-screen">
+    <main id='particles-js' class="relative  w-full h-full flex justify-center items-center text-center">
+        <div class="">
+            <h2 class="text-6xl relative text-white z-30">
+                Rorem Mipsum
+                <span class="mt-4 block text-lg">
+                    sit amet consectetur adipisicing elit
+                </span>
+            </h2>
+        </div>
+        <section class="absolute bottom-0 left-0 w-full z-10 pointer-events-none"></section>
+    </main>
+
+    <script src="../static/js/particles.js"></script>
+    <script src="../static/js/app.js"></script>
+</body>
+
+</html>

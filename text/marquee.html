@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../static/css/all.css">
+    <title>CSS 3D Marquee Text 2 Html CSS Animation Effects</title>
+
+    <style>
+        body {
+            background: radial-gradient(#673ab7, #190838);
+        }
+
+        .box {
+            position: absolute;
+            width: 1200px;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            transform-style: preserve-3d;
+            overflow: hidden;
+        }
+
+        .box.box1 {
+            background: #673ab7;
+            transform-origin: right;
+            transform: perspective(500px) translateX(-50%) rotateY(-15deg);
+            color: #fff;
+        }
+
+        .box.box2 {
+            background: #40158c;
+            transform-origin: left;
+            transform: perspective(500px) translateX(50%) rotateY(15deg);
+        }
+
+        .box h2 {
+            position: absolute;
+            white-space: nowrap;
+            left: 0;
+            font-size: 8rem;
+            animation: animH 15s linear infinite;
+        }
+
+        .box.box2 h2 {
+            color: rgba(255, 255, 255, .2);
+            left: -100%;
+        }
+
+        @keyframes animH {
+            from {
+                transform: translate(2400px);
+            }
+
+            to {
+                transform: translate(-100%);
+            }
+        }
+
+    </style>
+</head>
+
+<body class="flex justify-center items-center h-screen overflow-hidden">
+    <div class="box box1">
+        <h2>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur officiis atque cupiditate ipsum ab
+            tempore
+        </h2>
+    </div>
+    <div class="box box2">
+        <h2>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur officiis atque cupiditate ipsum ab
+            tempore
+        </h2>
+    </div>
+</body>
+
+</html>
