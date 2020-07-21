@@ -7,9 +7,11 @@
 .bg-jigsaw {
     background-image: url(../img/jigsaw.svg);
 }
+
 .bg-cloud {
     background-image: url(../img/cloud.svg);
 }
+
 .transition-sm {
     transition: 0.5s;
 }
